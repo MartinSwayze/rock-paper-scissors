@@ -12,12 +12,12 @@ function getComputerChoice(){
 
 function getPlayerChoice(){
     let playerMove = prompt("Choose your move! 'rock, paper, scissors': ")
+    playerMove = playerMove.toLowerCase();
     if(playerMove != "rock" && playerMove != "paper" && playerMove != "scissors"){
         console.log("Wrong input! Try Again!")
         getPlayerChoice();
     }
-
-    return playerMove.toLowerCase();
+    return playerMove;
 }
 
 /*function playRound(computerMove, playerMove){
@@ -134,4 +134,4 @@ function playGame(){
     else{console.log("Game result is DRAW")}
 }
 
-playGame();
+//playGame();
